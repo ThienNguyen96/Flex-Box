@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex template</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+    .header{
+        padding: 60px;
+        text-align: center;
+        background: #1abc9c;
+        color: #fff;
+    }
+    .navbar{
+        display: flex;
+        background: #333;
+    }
+    .navbar a {
+        color: #fff;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+    }
+    .navbar a:hover {
+        background-color: #ddd;
+        color: #000;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .side {
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+    .fakeimg{
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+    }
+    .fakeimg_main{
+        background-color: #fff;
+        width: 100%;
+        padding: 20px;
+    }
+    .main{
+        flex: 70%;
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+    }
+    .footer{
+        padding: 20px;
+        text-align: center;
+        background-color: #ddd;
+    }
+    @media screen and (max-width: 700px){
+        .row, .navbar {
+            flex-direction: column;
+        }
+    }
+</style>
+<body>
+    <div class="header">
+        <h1>MY WEBSITE</h1>
+        <p>With a <b>flexible</b> layout.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">React</a>
+        <a href="#">Angular</a>
+        <a href="#">Vue</a>
+    </div>
+    <!-- GRID -->
+    <div class="row">
+        <div class="side">
+            <h2>About Me</h2>
+            <h5>Photo Of Me:</h5>
+            <div class="fakeimg" style="height:200px;"> image</div>
+            <p>this is some description about me, as you know nothing here...</p>
+            <h3>More Text</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div>
+        </div>
+        <div class="main">
+            <h2>TITLE HEADING</h2>
+            <h5>Title Description</h5>
+            <div class="fakeimg_main" style="height:200px;">Image</div>
+            <p>Some text...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Porro doloribus, eaque ut possimus explicabo vel accusantium pariatur
+            a amet nisi quos cumque at sequi modi cupiditate consequatur nesciunt,
+            ipsum laboriosam molestiae dolorum! Vero recusandae hic, laudantium natus
+            modi vitae suscipit doloremque nisi numquam tenetur nostrum impedit veniam. 
+            saepe velit aspernatur!</p>
+            <br>
+            <h2>TITLE HEADING</h2>
+            <h5>Title description</h5>
+            <div class="fakeimg_main" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sunt cupiditate voluptas, quibusdam dolores natus dolorem perferendis enim ea voluptatum libero repellendus?
+                Id consectetur rem veniam tempora blanditiis minima cumque nisi, tenetur magnam expedita fuga velit ducimus
+                animi quasi pariatur, ipsa rerum tempore amet explicabo sunt facere. Ducimus omnis voluptas amet?</p>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+</body>
+</html>
